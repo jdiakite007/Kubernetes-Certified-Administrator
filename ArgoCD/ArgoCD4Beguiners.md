@@ -31,10 +31,10 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 127.0.0.1
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo
 ```
 5. Accéder à l'interface Argo CD
-   Ouvre ton navigateur et accède à :http://localhost:8080
-➡️ Identifiants :
-    Username : admin
-    Password : (celui récupéré à l'étape 4)
+   Ouvre ton navigateur et accède à :http://localhost:8080       
+➡️ Identifiants :       
+    Username : admin      
+    Password : (celui récupéré à l'étape 4)      
 
 6. Ajouter une App via GitHub
  
