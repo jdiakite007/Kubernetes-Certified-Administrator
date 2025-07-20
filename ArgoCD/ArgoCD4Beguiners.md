@@ -59,8 +59,12 @@ Ton app utilise probablement un Service NodePort.
 Pour trouver son port :<img width="855" height="158" alt="image" src="https://github.com/user-attachments/assets/4a6149f0-c88c-4aaf-a33b-b665a39fd640" />
 
 
+```bash
 http://$(minikube ip):<NodePort>
+```
+```bash 
 curl http://$(minikube ip):<NodePort>
+```
 <img width="928" height="386" alt="image" src="https://github.com/user-attachments/assets/2cc5cbc6-2d4c-4ce5-8a34-c798c2095ec6" />
 
 
