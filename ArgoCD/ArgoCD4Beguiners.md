@@ -36,28 +36,26 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
     Username : admin
     Password : (celui récupéré à l'étape 4)
 
-Pour plus de détails :
-👉 [Voir la documentation officielle](https://argo-cd.readthedocs.io/en/stable/getting_started/)
-
 6. Ajouter une App via GitHub
-Voici un exemple avec une app Nginx dans un repo GitHub :
+ 
+Exemple: avec une app Nginx dans un repo GitHub :      
+
 ➡️ Dans l'interface Argo CD, clique sur "NEW APP"
-Puis remplis :
-    Application Name: nginx-app
-    Project: default
-    Sync Policy: Manual ou Automatic
-    Repository URL: https://github.com/argoproj/argocd-example-app
-    Revision: HEAD
-    Path: kustomize-hello-world
-    Cluster: https://kubernetes.default.svc
-    Namespace: default
-✅ Clique sur "Create", puis sur "Sync"
+Puis remplis :     
+    Application Name: nginx-app     
+    Project: default     
+    Sync Policy: Manual ou Automatic     
+    Repository URL: https://github.com/argoproj/argocd-example-app   
+    Revision: HEAD    
+    Path: kustomize-hello-world    
+    Cluster: https://kubernetes.default.svc      
+    Namespace: default      
+✅ Clique sur "Create", puis sur "Sync"     
 
 ✅ 7. Accéder à ton app déployée
-Ton app utilise probablement un Service NodePort.
+Ton app utilise probablement un Service NodePort.    
 
 Pour trouver son port :<img width="855" height="158" alt="image" src="https://github.com/user-attachments/assets/4a6149f0-c88c-4aaf-a33b-b665a39fd640" />
-
 
 ```bash
 http://$(minikube ip):<NodePort>
@@ -68,5 +66,6 @@ curl http://$(minikube ip):<NodePort>
 <img width="928" height="386" alt="image" src="https://github.com/user-attachments/assets/2cc5cbc6-2d4c-4ce5-8a34-c798c2095ec6" />
 
 
-
+Pour plus de détails :
+👉 [Voir la documentation officielle](https://argo-cd.readthedocs.io/en/stable/getting_started/)
     
