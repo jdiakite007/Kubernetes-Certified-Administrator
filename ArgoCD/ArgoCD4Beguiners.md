@@ -40,14 +40,15 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
  
 Exemple: avec une app Nginx dans un repo GitHub :      
 
-➡️ Dans l'interface Argo CD, clique sur "NEW APP"
+➡️ Dans l'interface Argo CD:
+clique sur "NEW APP"
 Puis remplis :     
     Application Name: nginx-app     
     Project: default     
     Sync Policy: Manual ou Automatic     
-    Repository URL: https://github.com/argoproj/argocd-example-app   
+    Repository URL: https://github.com/diakite007/Kubernetes-Certified-Administrator
     Revision: HEAD    
-    Path: kustomize-hello-world    
+    Path: ArgoCD   
     Cluster: https://kubernetes.default.svc      
     Namespace: default      
 ✅ Clique sur "Create", puis sur "Sync"     
